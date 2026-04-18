@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
-import { IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/angular/standalone';
+import { IonHeader, IonToolbar, IonTitle, IonContent, IonItemDivider } from '@ionic/angular/standalone';
+import { ListTaskComponent } from '../list-task/list-task.component';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
-  imports: [IonHeader, IonToolbar, IonTitle, IonContent],
+  imports: [IonItemDivider, IonHeader, IonToolbar, IonTitle, IonContent, ListTaskComponent],
 })
 export class HomePage {
   constructor() {}

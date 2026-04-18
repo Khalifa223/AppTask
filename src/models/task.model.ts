@@ -3,9 +3,9 @@ export interface Task {
     titre: string
     description: string
     statut: boolean
-    Priorite: Priority
-    dateCréation: Date
-    dateEchéance: Date
+    priorite: string
+    dateCreation: string
+    dateEcheance: string
     categorie: string
 }
 

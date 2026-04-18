@@ -1,0 +1,10 @@
+<!-- LIST -->
+  <div *ngFor="let task of tasks" class="task-card">
+    <h3>{{ task.titre }}</h3>
+    <p>{{ task.description }}</p>
+    <p>Priorité: {{ task.priorite }}</p>
+    <p>Statut: {{ task.statut ? '✔️' : '❌' }}</p>
+
+    <!-- <button (click)="selectTask(task)">Modifier</button>
+    <button (click)="deleteTask(task.id)">Supprimer</button> -->
+  </div>
