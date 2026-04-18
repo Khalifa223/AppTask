@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Détail de la tâche</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="close()">Fermer</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ task.titre }}</ion-card-title>
+      <ion-card-subtitle>{{ task.categorie }}</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <p><strong>Description :</strong></p>
+      <p>{{ task.description }}</p>
+
+      <ion-item>
+        <ion-label>Priorité</ion-label>
+        <ion-badge [color]="
+          task.priorite === 'HIGH' ? 'danger' :
+          task.priorite === 'MEDIUM' ? 'warning' : 'success'
+        ">
+          {{ task.priorite }}
+        </ion-badge>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Statut</ion-label>
+        <ion-badge [color]="task.statut ? 'success' : 'medium'">
+          {{ task.statut ? 'Terminée' : 'En cours' }}
+        </ion-badge>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Date création</ion-label>
+        <ion-note slot="end">
+          {{ task.dateCreation }}
+        </ion-note>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Date échéance</ion-label>
+        <ion-note slot="end">
+          {{ task.dateEcheance }}
+        </ion-note>
+      </ion-item>
+
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

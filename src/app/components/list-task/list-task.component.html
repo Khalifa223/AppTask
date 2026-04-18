@@ -5,6 +5,7 @@
     <p>Priorité: {{ task.priorite }}</p>
     <p>Statut: {{ task.statut ? '✔️' : '❌' }}</p>
 
+    <ion-button (click)="openModal(task)">Voir</ion-button>
     <!-- <button (click)="selectTask(task)">Modifier</button>
     <button (click)="deleteTask(task.id)">Supprimer</button> -->
   </div>

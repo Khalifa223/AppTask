@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonHeader, IonToolbar, IonTitle, IonContent, IonItemDivider } from '@ionic/angular/standalone';
-import { ListTaskComponent } from '../list-task/list-task.component';
+import { ListTaskComponent } from '../components/list-task/list-task.component';
 
 @Component({
   selector: 'app-home',
