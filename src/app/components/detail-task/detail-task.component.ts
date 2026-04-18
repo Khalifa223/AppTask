@@ -8,7 +8,7 @@ import { TaskService } from 'src/services/task.service';
   selector: 'app-detail-task',
   templateUrl: './detail-task.component.html',
   styleUrls: ['./detail-task.component.scss'],
-  imports: [IonHeader, IonTitle, IonButton, IonToolbar, IonContent, IonCard, IonCardHeader, IonButtons, IonCardSubtitle, IonCardTitle, IonCardContent, IonItem, IonBadge, IonLabel, IonNote, ]
+  imports: [IonHeader, IonTitle, IonButton, IonToolbar, IonContent, IonCard, IonCardHeader, IonButtons, IonCardSubtitle, IonCardTitle, IonCardContent, IonItem, IonBadge, IonLabel, IonNote]
 })
 export class DetailTaskComponent implements OnInit {
   @Input() task!: Task;

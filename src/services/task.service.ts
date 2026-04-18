@@ -116,5 +116,8 @@ export class TaskService {
     return this.tasks.find(t => t.id === id);
   }
 
-  
+  addTask(task: Task) {
+    this.tasks.push(task);
+  }
+
 }

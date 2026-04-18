@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Ajouter une tâche</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" *ngIf="newTask">
+
+  <form (ngSubmit)="addTask()">
+
+    <!-- TITRE -->
+    <ion-item>
+      <ion-label position="stacked">Titre</ion-label>
+      <ion-input ngDefaultControl
+        [(ngModel)]="newTask.titre"
+        name="titre"
+        required
+        placeholder="Titre de la tâche">
+      </ion-input>
+    </ion-item>
+
+    <!-- DESCRIPTION -->
+    <ion-item>
+      <ion-label position="stacked">Description</ion-label>
+      <ion-textarea ngDefaultControl
+        [(ngModel)]="newTask.description"
+        name="description"
+        placeholder="Description">
+      </ion-textarea>
+    </ion-item>
+
+    <!-- PRIORITÉ -->
+    <ion-item>
+      <ion-label position="stacked">Priorité</ion-label>
+      <ion-select ngDefaultControl [(ngModel)]="newTask.priorite" name="priorite">
+        <ion-select-option *ngFor="let p of priorities" [value]="p">
+          {{ p }}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <!-- DATE -->
+    <!-- <ion-item>
+      <ion-label position="stacked">Date d'échéance</ion-label>
+      <ion-datetime ngDefaultControl
+        presentation="date"
+        [(ngModel)]="newTask.dateEcheance"
+        name="dateEcheance">
+      </ion-datetime>
+    </ion-item> -->
+
+    <!-- CATÉGORIE -->
+    <ion-item>
+      <ion-label position="stacked">Catégorie</ion-label>
+      <ion-input ngDefaultControl
+        [(ngModel)]="newTask.categorie"
+        name="categorie"
+        placeholder="Ex: Travail, Personnel">
+      </ion-input>
+    </ion-item>
+
+    <!-- BOUTON -->
+    <ion-button expand="block" type="submit" color="primary" class="ion-margin-top">
+      Ajouter
+    </ion-button>
+
+  </form>
+
+</ion-content>

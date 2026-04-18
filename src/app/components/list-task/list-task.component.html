@@ -1,11 +1,11 @@
 <!-- LIST -->
-  <div *ngFor="let task of tasks" class="task-card">
-    <h3>{{ task.titre }}</h3>
-    <p>{{ task.description }}</p>
-    <p>Priorité: {{ task.priorite }}</p>
-    <p>Statut: {{ task.statut ? '✔️' : '❌' }}</p>
+<div *ngFor="let task of tasks" class="task-card">
+  <h3>{{ task.titre }}</h3>
+  <p>{{ task.description }}</p>
+  <p>Priorité: {{ task.priorite }}</p>
+  <p>Statut: {{ task.statut ? '✔️' : '❌' }}</p>
 
-    <ion-button (click)="openModal(task)">Voir</ion-button>
-    <!-- <button (click)="selectTask(task)">Modifier</button>
+  <ion-button (click)="openModal(task)">Voir</ion-button>
+  <!-- <button (click)="selectTask(task)">Modifier</button>
     <button (click)="deleteTask(task.id)">Supprimer</button> -->
-  </div>
+</div>
